@@ -1,0 +1,675 @@
+body {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black; }
+
+html {
+  width: 100%;
+  height: 100%; }
+
+#appwrapper {
+  width: 100%;
+  display: flex;
+  margin: auto;
+  position: relative; }
+
+#info_section {
+  width: 50%;
+  height: 100%;
+  background-image: url("../images/infobackground.png");
+  background-size: cover;
+  z-index: 1000;
+  font-family: Open Sans;
+  color: white; }
+  #info_section #infowrapper {
+    width: 80%;
+    height: 91%;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative; }
+  #info_section #bodypartcontainer {
+    width: 100%;
+    height: 66%;
+    border: solid 3px rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0 0 85px black , 0 0 5px 1px black;
+    background-size: cover;
+    background-repeat: no-repeat; }
+    #info_section #bodypartcontainer #magnifying_toggle {
+      width: 10%;
+      height: 10%;
+      right: 0%;
+      bottom: 2%;
+      position: absolute;
+      background-image: url("../images/mag_selected.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 8000; }
+  #info_section #part_title {
+    font-weight: 400;
+    font-size: 2vw;
+    margin-top: 10px; }
+  #info_section #part_info {
+    margin-top: 5px;
+    font-weight: 400;
+    font-size: 1vw;
+    column-count: 2;
+    column-gap: 40px;
+    font-weight: 300; }
+
+#body_section {
+  width: 35%;
+  height: 100%;
+  background-image: url("../images/bodybackground.png");
+  background-size: cover;
+  z-index: 2000;
+  box-shadow: -10px 0px 70px black; }
+  #body_section #bodycontainer {
+    width: 75%;
+    height: 92%;
+    margin: auto;
+    background-image: url("../images/frontskin.png");
+    background-size: contain;
+    background-position: center, center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
+    #body_section #bodycontainer #icon_frontview {
+      width: 20%;
+      height: 15%;
+      background-image: url("../images/icon_frontskin_selected.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: left;
+      margin-top: 170%; }
+    #body_section #bodycontainer #icon_backview {
+      width: 20%;
+      height: 15%;
+      background-image: url("../images/icon_backskin.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right;
+      margin-top: 170%; }
+
+#layer_section {
+  width: 15%;
+  height: 100%;
+  background: linear-gradient(0deg, #070f27, #2b4b80);
+  background-size: cover;
+  z-index: 3000;
+  box-shadow: -10px 0px 70px black, 0 0 4vw 0.5vw rgba(0, 0, 0, 0.9) inset; }
+
+#layerbuttons {
+  width: 75%;
+  height: 92%;
+  margin: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  font-family: Open Sans;
+  color: white;
+  font-weight: 600;
+  font-size: 20px; }
+  #layerbuttons .layerbox {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 25%;
+    font-weight: 400;
+    font-size: 0.9vw;
+    border-radius: 10px;
+    position: relative; }
+  #layerbuttons .titlelayerbox {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 15%;
+    font-weight: 400;
+    font-size: 0.9vw;
+    border-radius: 10px;
+    position: relative; }
+  #layerbuttons #titlebox {
+    background-image: url("../images/titlelogo.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-radius: 0px; }
+  #layerbuttons #skinbox {
+    margin-top: 0px;
+    background-image: url("../images/skinicon.png");
+    background-size: cover;
+    background-repeat: no-repeat; }
+  #layerbuttons #musclebox {
+    background-image: url("../images/muscleicon.png");
+    background-size: cover;
+    background-repeat: no-repeat; }
+  #layerbuttons #bonebox {
+    background-image: url("../images/boneicon.png");
+    background-size: cover;
+    background-repeat: no-repeat; }
+  #layerbuttons h1 {
+    position: absolute;
+    margin: 0px auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 5px black; }
+
+#language_box {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  position: relative;
+  justify-content: center; }
+
+#language_button {
+  width: 80%;
+  height: 45%;
+  color: white;
+  bottom: 0%;
+  position: absolute;
+  font-size: 1.2vw;
+  text-align: center;
+  background: -webkit-linear-gradient(bottom, #314875 0%, #5a79a8 50%, #9bafcb 100%);
+  border-radius: 6px;
+  box-shadow: inset 0px 0px 10px 1px lightblue, 0px 0px 10px 1px black;
+  font-weight: 400; }
+  #language_button p {
+    margin-top: 9%;
+    opacity: .75; }
+
+#overlay_color {
+  background-color: dodgerblue; }
+
+#front_glowing_overlays {
+  background-color: none;
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+#bicep_overlay_left {
+  position: absolute;
+  height: 10%;
+  width: 9%;
+  top: 22%;
+  left: 22.5%;
+  filter: blur(10px); }
+
+#bicep_overlay_right {
+  position: absolute;
+  height: 10%;
+  width: 9%;
+  top: 22%;
+  right: 22.5%;
+  filter: blur(10px); }
+
+#quad_overlay_left {
+  position: absolute;
+  height: 20%;
+  width: 14%;
+  top: 44%;
+  left: 33%;
+  filter: blur(20px); }
+
+#quad_overlay_right {
+  position: absolute;
+  height: 20%;
+  width: 14%;
+  top: 44%;
+  right: 33%;
+  filter: blur(20px); }
+
+#pec_overlay_left {
+  position: absolute;
+  height: 8%;
+  width: 15%;
+  top: 17%;
+  left: 33%;
+  filter: blur(20px); }
+
+#pec_overlay_right {
+  position: absolute;
+  height: 8%;
+  width: 15%;
+  top: 17%;
+  right: 33%;
+  filter: blur(20px); }
+
+#abs_overlay {
+  position: absolute;
+  height: 15%;
+  width: 20%;
+  top: 27%;
+  right: 40%;
+  filter: blur(20px); }
+
+#back_glowing_overlays {
+  background-color: none;
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+#ham_overlay_left {
+  position: absolute;
+  height: 15%;
+  width: 14%;
+  top: 52%;
+  left: 34%;
+  filter: blur(20px); }
+
+#ham_overlay_right {
+  position: absolute;
+  height: 15%;
+  width: 14%;
+  top: 52%;
+  right: 34%;
+  filter: blur(20px); }
+
+#tricep_overlay_left {
+  position: absolute;
+  height: 11%;
+  width: 9%;
+  top: 22%;
+  left: 22.5%;
+  filter: blur(10px); }
+
+#tricep_overlay_right {
+  position: absolute;
+  height: 11%;
+  width: 9%;
+  top: 22%;
+  right: 22.5%;
+  filter: blur(10px); }
+
+#glute_overlay_left {
+  position: absolute;
+  height: 8%;
+  width: 15%;
+  top: 42%;
+  left: 32%;
+  filter: blur(20px); }
+
+#glute_overlay_right {
+  position: absolute;
+  height: 8%;
+  width: 15%;
+  top: 42%;
+  right: 32%;
+  filter: blur(20px); }
+
+#traps_overlay {
+  position: absolute;
+  height: 13%;
+  width: 22%;
+  top: 13%;
+  right: 39%;
+  filter: blur(20px); }
+
+@keyframes view_pulse {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.05); }
+  100% {
+    transform: scale(1); } }
+@keyframes mag_pulse {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(0.9); }
+  100% {
+    transform: scale(1); } }
+@keyframes overlay_pulse {
+  0% {
+    opacity: .55; }
+  50% {
+    opacity: .25; }
+  100% {
+    opacity: .55; } }
+.pulse {
+  color: white;
+  opacity: 0.6; }
+
+.viewpulse {
+  animation-name: view_pulse;
+  animation-duration: 2s;
+  transform-origin: 70% 70%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
+
+.magpulse {
+  animation-name: mag_pulse;
+  animation-duration: 2s;
+  transform-origin: 70% 70%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
+
+.selectedlayer {
+  box-sizing: border-box;
+  color: white;
+  box-shadow: 0px 0px 10px 2px lightblue; }
+
+.overlay_pulse {
+  animation-name: overlay_pulse;
+  animation-duration: 2s;
+  transform-origin: 70% 70%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  opacity: 0.75;
+  background-color: dodgerblue; }
+
+.magnify {
+  z-index: 20;
+  position: relative;
+  margin: 0px auto;
+  overflow: hidden;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none; }
+
+.magnify img {
+  display: block; }
+
+.element_to_magnify {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: url("../images/individual_parts/biceps.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.element_to_magnify a {
+  display: block;
+  position: absolute;
+  top: 80px;
+  right: 80px;
+  background-color: rgba(200, 200, 200, 0.25);
+  padding: 4px;
+  font-size: 18px;
+  color: #fff; }
+
+.element_to_magnify img {
+  width: 100%;
+  height: auto; }
+
+.magnify_glass {
+  z-index: 300;
+  position: absolute;
+  height: 30%;
+  cursor: move; }
+
+.mg_ring {
+  pointer-events: none;
+  background: none;
+  position: absolute;
+  -moz-box-shadow: inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  -ms-box-shadow: inset 0 0 10px #000000;
+  box-shadow: inset 0 0 10px #000000;
+  border: 3px solid white;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  z-index: 20; }
+
+.mg_zone {
+  position: absolute;
+  border-radius: 50%;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  overflow: hidden; }
+
+#outterslide {
+  height: 70%;
+  width: 100%; }
+
+#slidecontainer {
+  height: 100%;
+  width: 80%;
+  background-size: cover;
+  margin-left: auto;
+  position: relative;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column; }
+
+#slidebar {
+  height: 75%;
+  width: 15%;
+  background: lightgrey;
+  background-position: center, center;
+  background-size: cover;
+  box-shadow: inset 0 0 .2vw .1vw black;
+  margin: auto;
+  position: absolute;
+  border-bottom-right-radius: 1vw;
+  border-bottom-left-radius: 1vw;
+  border-top-right-radius: 1vw;
+  border-top-left-radius: 1vw;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: 29.5%;
+  z-index: -5000; }
+
+.dropper {
+  height: 33.33%;
+  width: 100%;
+  background: transparent; }
+
+#boxwrap {
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  height: 33.33%;
+  z-index: 5000; }
+
+#dragbox {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url("../images/slider_button.png");
+  background-position: center, center;
+  background-size: cover;
+  height: 30%;
+  margin-left: 60%;
+  border-radius: 50%;
+  box-shadow: 1px 5px 15px 1px black;
+  font-size: .8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-shadow: 0px 0px 4px black; }
+
+/* @keyframes slot_pulse {
+	0% { box-shadow: inset 0px 0px 15px 4px rgba(9, 106, 155, 1); }
+	50% { box-shadow: inset 0px 0px 10px 3px rgba(9, 106, 155, 0.50); }
+	100% { box-shadow: inset 0px 0px 15px 4px rgba(9, 106, 155, 1); }
+} */
+.dash {
+  position: absolute;
+  height: 1%;
+  width: 11%;
+  background-color: white;
+  top: 50%;
+  right: 27.5%;
+  opacity: .5; }
+
+#glowing_slot {
+  position: relative;
+  animation-name: slot_pulse;
+  animation-duration: 2.5s;
+  transform-origin: 70% 70%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  height: 30%;
+  margin-left: 60%;
+  border-radius: 50%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
+  #glowing_slot p {
+    position: absolute;
+    margin: 0;
+    font-size: .8vw;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: .65;
+    font-weight: 300;
+    margin-left: -180%; }
+
+#dropslot1 {
+  position: relative; }
+  #dropslot1 #glowing_slot {
+    background-size: cover; }
+    #dropslot1 #glowing_slot p {
+      opacity: 1;
+      font-weight: 600; }
+
+#dropslot2 {
+  position: relative; }
+  #dropslot2 #glowing_slot {
+    background-size: cover; }
+
+#dropslot3 {
+  position: relative; }
+  #dropslot3 #glowing_slot {
+    background-size: cover; }
+
+/* #flashball {
+	
+	background-color: white;
+	border-radius: 50%;
+	width: 9%;
+	height: 5%;
+	filter: blur(4px);
+	position: absolute;
+	z-index: -4000;
+
+	left: 78%;
+	transform:translateX(-50%);
+	top: 13%;
+
+
+   animation-name: moving_ball;
+   animation-duration: 4s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+  
+} 
+@keyframes moving_ball {
+    0% {
+        top: 13%;
+        opacity: 1;
+    }
+    25% {
+        top: 78%;
+        opacity: 1;
+    }
+    26% {
+    	 opacity: 0;
+    	 top: 78%;
+    }
+    49% {
+    	 opacity: 0;
+    	 top: 78%;
+    }
+    50% {
+    	 opacity: 1;
+    	 top: 78%;
+    }
+    75%{
+    	top: 13%;
+        opacity: 1;
+    }
+    76%{
+    	top: 13%;
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        top: 13%;
+    }
+} */
+#container_langselect {
+  position: absolute;
+  height: 30%;
+  width: 30%;
+  background-color: white;
+  z-index: 90000;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  box-shadow: 0px 0px 80px 2px black;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: Open Sans;
+  border: 1px solid darkblue; }
+  #container_langselect .lang_box {
+    height: 13%;
+    width: 100%;
+    font-size: 1vw;
+    color: black;
+    background-color: white;
+    display: flex;
+    align-items: center; }
+  #container_langselect #lang_eng {
+    color: white;
+    background-color: #2989d8; }
+  #container_langselect #lang_header {
+    height: 25%;
+    width: 100%;
+    font-size: 2vw;
+    font-weight: 600;
+    background: -webkit-linear-gradient(top, #314875 0%, #5a79a8 50%, #9bafcb 100%);
+    display: flex;
+    color: white;
+    align-items: center; }
+  #container_langselect p {
+    margin-left: 3%; }
+  #container_langselect #accept {
+    height: 23%;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse; }
+  #container_langselect #accept_button {
+    height: 70%;
+    width: 25%;
+    margin-right: 3%;
+    background: -webkit-linear-gradient(top, #314875 0%, #5a79a8 50%, #9bafcb 100%);
+    color: white;
+    align-items: center;
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto; }
+    #container_langselect #accept_button p {
+      position: absolute;
+      font-weight: 600;
+      font-size: 1.2vw;
+      margin: 0;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%); }
+
+/*# sourceMappingURL=style.css.map */
