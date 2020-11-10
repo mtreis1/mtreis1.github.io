@@ -3450,9 +3450,8 @@ transition: all .2s ease;
 			width: 100%;
 			padding-left: 0%;
 			
-			display: flex;
+			display: inline-flex;
 			flex-wrap: wrap;
-			display: inline-block;
 		}
 		.sub_visual_asset{
 
@@ -3481,7 +3480,7 @@ transition: all .2s ease;
 			width: 100%;
 			padding-left: 0%;
 			
-			display: flex;
+			display: inline-flex;
 			flex-wrap: wrap;
 		}
 
