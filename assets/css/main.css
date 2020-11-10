@@ -3450,13 +3450,13 @@ transition: all .2s ease;
 			width: 100%;
 			padding-left: 0%;
 			
-			display: inline-flex;
-			flex-wrap: wrap;
+			display: inline-block;
+			//flex-wrap: wrap;
 		}
 		.sub_visual_asset{
 
 			width: 100%;
-			height: auto;
+			//height: auto;
 			margin-top: 3%;
 			//border-radius: 10px;
 
@@ -3475,14 +3475,14 @@ transition: all .2s ease;
 		#description_half{
 			width: 100%;
 		}
-			.visual_assets{
+			/*.visual_assets{
 
 			width: 100%;
 			padding-left: 0%;
 			
 			display: inline-flex;
 			flex-wrap: wrap;
-		}
+		}*/
 
 
 		}
