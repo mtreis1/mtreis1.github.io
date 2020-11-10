@@ -171,7 +171,7 @@ input, select, textarea {
 		font-size: 2.75em;
 		font-weight: 700;
 		line-height: 1.3;
-		margin: 0 0 1em 0;
+		margin: 0 0 .5em 0;
 		letter-spacing: -0.035em;
 	}
 
@@ -3075,7 +3075,7 @@ transition: all .2s ease;
 
 					#menu > .inner > ul > li a {
 						display: block;
-						padding: 1em 0;
+						padding: .75em 0;
 						line-height: 1.5;
 						border: 0;
 						color: inherit;
@@ -3086,7 +3086,7 @@ transition: all .2s ease;
 
 					#menu > .inner > ul > li a:hover {
 						color: white !important;
-						text-shadow: 2px 2px 0px grey;
+						/*text-shadow: 2px 2px 0px grey;*/
 						
 					}
 
@@ -3421,15 +3421,34 @@ transition: all .2s ease;
 			flex-wrap: wrap;
 			width: 100%;
 		}
+		.description {
+
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			margin-bottom: 20px;
+		}
 		.description_text {
 
+			width: 100%;
+			margin-right: 50%;
+			padding-right: 0%;
+		}
+		#description_half{
+			width: 40%;
+		}
+		.duties_list {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		.duties_list > h3 {
 			width: 50%;
-			padding-right: 5%;
 		}
 		.visual_assets{
 
-			width: 50%;
-			padding-left: 5%;
+			width: 100%;
+			padding-left: 0%;
 			
 			display: flex;
 			flex-wrap: wrap;
@@ -3452,6 +3471,9 @@ transition: all .2s ease;
 
 			width: 100%;
 			padding-right: 0%;
+		}
+		#description_half{
+			width: 100%;
 		}
 			.visual_assets{
 
