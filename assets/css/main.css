@@ -2871,7 +2871,7 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		padding: 8em 0 0.1em 0 ;
+		padding: 3em 0 0.1em 0 ;
 	}
 
 		#header .logo {
@@ -3461,6 +3461,10 @@ transition: all .2s ease;
 			//border-radius: 10px;
 
 			
+		}
+		video{
+
+			background: black;
 		}
 		
 
