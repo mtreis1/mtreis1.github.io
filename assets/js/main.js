@@ -11,9 +11,10 @@
           'Augmented Reality.',
           'Mobile Apps.',
           'Web Design.',
-          'UX/UI.',
+          'User Experience.',
+          'User Interface.',
           'Animation.',
-          'Unity 3D.',
+          'Unity Engine.',
           
           ], i = 0;
       setInterval(function(){
